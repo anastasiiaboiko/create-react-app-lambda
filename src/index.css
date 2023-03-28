@@ -6,6 +6,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+nav {
+  display: flex;
+  color: white;
+  margin-bottom: 2em;
+}
+
+nav a {
+  color: white;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-left: 2em;
 }
 
 code {

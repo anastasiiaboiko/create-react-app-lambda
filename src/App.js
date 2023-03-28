@@ -1,50 +1,27 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
+import React from "react"
 import "./App.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Shop from "./pages/Shop";
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
-
-  handleClick = api => e => {
-    e.preventDefault()
-
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
-  render() {
-    const { loading, msg } = this.state
-
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edits <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="blogs" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="shop" element={<Shop />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <h1>Sample project</h1>
+      <p>This project was set up to test ActiveCampaign site tracking via GTM.</p>
+    </div>
+  )
 }
 
 export default App
