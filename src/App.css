@@ -4,8 +4,53 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 2em;
+  margin: 2em;
 }
 
 .App p {
   margin-top: 1em;
+}
+
+.App ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App ul li {
+  margin-left: 2em;
+}
+
+.App ul li a {
+  color: white;
+}
+
+.App .page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.App .page .items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  margin-top: 1em;
+}
+
+.App .page .items .item {
+  width: 30%;
+  background-color: palevioletred;
+  height: 10em;
+  position: relative;
+}
+
+.App .page .items .item button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1em;
+  cursor: pointer;
 }

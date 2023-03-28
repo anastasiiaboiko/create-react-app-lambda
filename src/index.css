@@ -9,27 +9,6 @@ body {
   color: white;
 }
 
-nav {
-  display: flex;
-  color: white;
-  margin-bottom: 2em;
-}
-
-nav a {
-  color: white;
-  cursor: pointer;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav ul li {
-  margin-left: 2em;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
