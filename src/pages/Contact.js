@@ -7,7 +7,7 @@ const Contact = () => {
     const formId = '_form_1_';
 
     const onSubmit = async (data) => {
-        handleActiveCampaignSubmit(data, 'https://anastaciaboiko.activehosted.com/proc.php', formId)
+        handleActiveCampaignSubmit(data, 'anastaciaboiko', formId)
     }
 
     return (
