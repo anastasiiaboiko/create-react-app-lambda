@@ -54,3 +54,12 @@
   margin: 1em;
   cursor: pointer;
 }
+
+.App .newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.App .newsletter-form > * {
+  margin-top: 1em;
+}
