@@ -1,18 +1,21 @@
 import React from "react";
 import { ActiveCampaignInputs, handleActiveCampaignSubmit } from 'active-campaign-react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
     const { register, handleSubmit } = useForm();
     const formId = '_form_1_';
+    let navigate = useNavigate(); 
 
     const onSubmit = async (data) => {
-        handleActiveCampaignSubmit(data, 'anastaciaboiko', formId)
+        handleActiveCampaignSubmit(data, 'anastaciaboiko', formId);
+        navigate("/");
     }
 
     return (
         <div className="page">
-            <h1>Contact</h1>
+            <h1>Contacts</h1>
             <p>This is the contact page.</p>
 
             <p>Subscribe to our newsletter:</p>
