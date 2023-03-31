@@ -582,6 +582,7 @@ window._load_script = function(url, callback) {
       // use this trick to get the submit button & disable it using plain javascript
       document.querySelector('#_form_1_submit').disabled = true;
             var serialized = _form_serialize(document.getElementById('_form_1_')).replace(/%0A/g, '\\n');
+      console.log(serialized);
       var err = form_to_submit.querySelector('._form_error');
       err ? err.parentNode.removeChild(err) : false;
       _load_script('https://anastaciaboiko.activehosted.com/proc.php?' + serialized + '&jsonp=true');
